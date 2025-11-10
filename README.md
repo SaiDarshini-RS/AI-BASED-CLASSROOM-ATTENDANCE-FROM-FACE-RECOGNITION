@@ -1,8 +1,8 @@
-## AI-based-Classroom-Attendance-from-Face-Recognition
-# 1. Problem Statement
+# AI-based-Classroom-Attendance-from-Face-Recognition
+## 1. Problem Statement
 Manual attendance management in classrooms is often time-consuming, prone to human errors, and susceptible to proxy attendance. Traditional methods like roll-call or signature sheets are inefficient, especially in large classrooms. The AI-Based Classroom Attendance System aims to automate the process of marking attendance using face recognition, ensuring accuracy, security, and efficiency.
 
-# 2. Objectives
+## 2. Objectives
 To automate attendance marking using facial recognition technology.
 To maintain a digital record of students’ attendance in a database.
 To generate Excel reports for both present and absent students.
@@ -12,7 +12,7 @@ Below is the high-level architecture diagram:
 
 
 
-# Program:
+## Program:
 ```
 import tkinter as tk
 from tkinter import ttk, messagebox as mess, filedialog
@@ -331,7 +331,7 @@ message_label.place(x=100, y=370)
 window.mainloop()
 ```
 
-# 4. Methodology
+## 4. Methodology
 Step 1: Registration
 The system captures Student ID and Name via the GUI.
 100 images are collected per student using OpenCV and stored in the TrainingImage folder.
@@ -351,7 +351,7 @@ Present_<date>.xlsx
 Absent_<date>.xlsx
 The user selects the folder for saving the reports.
 
-# 5. Dataset Details
+## 5. Dataset Details
 Component	Details
 Dataset Source	Captured via webcam (real-time)
 No. of images per student	100
@@ -376,10 +376,10 @@ Model Training Time	< 1 minute (for 100 images/student)
 Average Recognition Confidence	< 55 (Threshold used for match acceptance)
 Accuracy can vary slightly based on camera quality, lighting, and face orientation.
 
-# 8. System Features
+## 8. System Features
 ✅ Student registration with photo capture ✅ Real-time face recognition ✅ Automatic attendance marking ✅ SQLite database integration ✅ Export to Excel (Present & Absent reports) ✅ User-friendly dashboard
 
-# 9. Database Schema
+## 9. Database Schema
 Table: students
 Column Name	Type	Description
 id	INTEGER	Auto-increment primary key
@@ -393,7 +393,7 @@ name	TEXT	Student name
 date	TEXT	Date of attendance
 status	TEXT	Present/Absent
 time	TEXT	Time of recognition
-# 10. GUI Overview
+## 10. GUI Overview
 Modules in the Interface:
 Registration Panel
 
@@ -405,7 +405,7 @@ Attendance Panel
 Start real-time recognition
 Display attendance list in table view
 Export daily attendance report
-# 11. Results and Output Screens
+## 11. Results and Output Screens
 Registration Window: Captures student face samples using webcam.
 
 Training Phase: Trains LBPH model with all stored images.
@@ -414,15 +414,15 @@ Attendance Window: Recognizes faces in real-time and updates the database.
 
 Reports: Automatically saves Present_<date>.xlsx and Absent_<date>.xlsx in the chosen folder.
 
-# 12. Conclusion
+## 12. Conclusion
 The AI-Based Classroom Attendance System successfully automates the attendance process using face recognition. It eliminates manual errors, reduces time, and ensures reliability. The integration of computer vision, GUI, and database management makes it a robust real-world application suitable for schools, colleges, and offices.
 
-# 13. Future Enhancements
+## 13. Future Enhancements
 Add mask detection and emotion recognition.
 Integrate with cloud databases for centralized storage.
 Add admin login and dashboard analytics.
 Include attendance summary graphs and trend reports.
-# 14. References
+## 14. References
 OpenCV Documentation — https://docs.opencv.org
 Tkinter GUI Reference — https://docs.python.org/3/library/tkinter.html
 SQLite Database — https://www.sqlite.org
